@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleção de Imagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    button {
+      padding: 20px 40px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #imagemContainer {
+      margin-top: 20px;
+    }
+
+    #imagemContainer.hidden {
+      display: none;
+    }
+
+    #imagemContainer {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="btnImg1" onclick="mostrarImagem('23_Em_abismos_ou_guerras_LETRA.jpg')">23_Em_abismos_ou_guerras_LETRA.jpg</button>
+    
+
+    <div id="imagemContainer" class="hidden">
+      <img id="imagemMostrada" src="" alt="Imagem" >
+      <button onclick="voltarAoInicio()">Voltar ao Início</button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarImagem(caminhoDaImagem) {
+      // Esconder os botões de escolha de imagem
+      document.getElementById('btnImg1').style.display = 'none';
+      
+
+      // Mostrar a imagem selecionada
+      var imagemMostrada = document.getElementById('imagemMostrada');
+      imagemMostrada.src = caminhoDaImagem;
+
+      // Mostrar o container da imagem
+      var imagemContainer = document.getElementById('imagemContainer');
+      imagemContainer.classList.remove('hidden');
+    }
+
+    function voltarAoInicio() {
+      // Mostrar os botões de escolha de imagem novamente
+      document.getElementById('btnImg1').style.display = 'inline-block';
+      
+
+      // Esconder a imagem mostrada e o botão "Voltar ao Início"
+      document.getElementById('imagemContainer').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

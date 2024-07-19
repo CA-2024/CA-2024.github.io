@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleção de Imagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    button {
+      padding: 20px 40px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #imagemContainer {
+      margin-top: 20px;
+    }
+
+    #imagemContainer.hidden {
+      display: none;
+    }
+
+    #imagemContainer {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="btnImg1" onclick="mostrarImagem('01_Rendei_gracas_PARTITURA.jpg')">01_Rendei_gracas_PARTITURA.jpg</button>
+    <button id="btnImg2" onclick="mostrarImagem('02_Salmo_34_A_PARTITURA.jpg')">02_Salmo_34_A_PARTITURA.jpg</button>
+    <button id="btnImg3" onclick="mostrarImagem('03_Ajuntamento_PARTITURA.jpg')">03_Ajuntamento_PARTITURA.jpg</button>
+    <button id="btnImg4" onclick="mostrarImagem('21_A_porta_PARTITURA.jpg')">21_A_porta_PARTITURA.jpg</button>
+    <button id="btnImg5" onclick="mostrarImagem('22_Amor_sincero_PARTITURA.jpg')">22_Amor_sincero_PARTITURA.jpg</button>
+    <button id="btnImg6" onclick="mostrarImagem('23_Em_abismos_ou_guerras_PARTITURA.jpg')">23_Em_abismos_ou_guerras_PARTITURA.jpg</button>
+    <button id="btnImg7" onclick="mostrarImagem('24_Face_brasileira_PARTITURA.jpg')">24_Face_brasileira_PARTITURA.jpg</button>
+    <button id="btnImg8" onclick="mostrarImagem('25_Na_contramao_PARTITURA.jpg')">25_Na_contramao_PARTITURA.jpg</button>
+    <button id="btnImg9" onclick="mostrarImagem('26_Vida_PARTITURA.jpg')">26_Vida_PARTITURA.jpg</button>
+
+    <div id="imagemContainer" class="hidden">
+      <img id="imagemMostrada" src="" alt="Imagem" >
+      <button onclick="voltarAoInicio()">Voltar ao Início</button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarImagem(caminhoDaImagem) {
+      // Esconder os botões de escolha de imagem
+      document.getElementById('btnImg1').style.display = 'none';
+      document.getElementById('btnImg2').style.display = 'none';
+      document.getElementById('btnImg3').style.display = 'none';
+      document.getElementById('btnImg4').style.display = 'none';
+      document.getElementById('btnImg5').style.display = 'none';
+      document.getElementById('btnImg6').style.display = 'none';
+      document.getElementById('btnImg7').style.display = 'none';
+      document.getElementById('btnImg8').style.display = 'none';
+      document.getElementById('btnImg9').style.display = 'none';
+      
+      // Mostrar a imagem selecionada
+      var imagemMostrada = document.getElementById('imagemMostrada');
+      imagemMostrada.src = caminhoDaImagem;
+
+      // Mostrar o container da imagem
+      var imagemContainer = document.getElementById('imagemContainer');
+      imagemContainer.classList.remove('hidden');
+    }
+
+    function voltarAoInicio() {
+      // Mostrar os botões de escolha de imagem novamente
+      document.getElementById('btnImg1').style.display = 'inline-block';
+      document.getElementById('btnImg2').style.display = 'inline-block';
+      document.getElementById('btnImg3').style.display = 'inline-block';
+      document.getElementById('btnImg4').style.display = 'inline-block';
+      document.getElementById('btnImg5').style.display = 'inline-block';
+      document.getElementById('btnImg6').style.display = 'inline-block';
+      document.getElementById('btnImg7').style.display = 'inline-block';
+      document.getElementById('btnImg8').style.display = 'inline-block';
+      document.getElementById('btnImg9').style.display = 'inline-block';
+
+      // Esconder a imagem mostrada e o botão "Voltar ao Início"
+      document.getElementById('imagemContainer').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
