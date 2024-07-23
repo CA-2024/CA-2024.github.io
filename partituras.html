@@ -49,12 +49,13 @@
     <button id="btnImg1" onclick="mostrarImagem('01_Rendei_gracas_P.jpg')">01_Rendei_gracas_P</button>
     <button id="btnImg2" onclick="mostrarImagem('02_Salmo_34_A_P.jpg')">02_Salmo_34_A_P</button>
     <button id="btnImg3" onclick="mostrarImagem('03_Ajuntamento_P.jpg')">03_Ajuntamento_P</button>
-    <button id="btnImg4" onclick="mostrarImagem('21_A_porta_P.jpg')">21_A_porta_P</button>
-    <button id="btnImg5" onclick="mostrarImagem('22_Amor_sincero_P.jpg')">22_Amor_sincero_P</button>
-    <button id="btnImg6" onclick="mostrarImagem('23_Em_abismos_ou_guerras_P.jpg')">23_Em_abismos_ou_guerras_P</button>
-    <button id="btnImg7" onclick="mostrarImagem('24_Face_brasileira_P.jpg')">24_Face_brasileira_P</button>
-    <button id="btnImg8" onclick="mostrarImagem('25_Na_contramao_P.jpg')">25_Na_contramao_P</button>
-    <button id="btnImg9" onclick="mostrarImagem('26_Vida_P.jpg')">26_Vida_P</button>
+    <button id="btnImg4" onclick="mostrarImagem('17_Bem_querer_P.jpg')">17_Bem_querer_P</button>
+    <button id="btnImg5" onclick="mostrarImagem('21_A_porta_P.jpg')">21_A_porta_P</button>
+    <button id="btnImg6" onclick="mostrarImagem('22_Amor_sincero_P.jpg')">22_Amor_sincero_P</button>
+    <button id="btnImg7" onclick="mostrarImagem('23_Em_abismos_ou_guerras_P.jpg')">23_Em_abismos_ou_guerras_P</button>
+    <button id="btnImg8" onclick="mostrarImagem('24_Face_brasileira_P.jpg')">24_Face_brasileira_P</button>
+    <button id="btnImg9" onclick="mostrarImagem('25_Na_contramao_P.jpg')">25_Na_contramao_P</button>
+    <button id="btnImg10" onclick="mostrarImagem('26_Vida_P.jpg')">26_Vida_P</button>
 
     <div id="imagemContainer" class="hidden">
       <img id="imagemMostrada" src="" alt="Imagem" >
@@ -74,6 +75,7 @@
       document.getElementById('btnImg7').style.display = 'none';
       document.getElementById('btnImg8').style.display = 'none';
       document.getElementById('btnImg9').style.display = 'none';
+      document.getElementById('btnImg10').style.display = 'none';
       
       // Mostrar a imagem selecionada
       var imagemMostrada = document.getElementById('imagemMostrada');
@@ -95,6 +97,7 @@
       document.getElementById('btnImg7').style.display = 'inline-block';
       document.getElementById('btnImg8').style.display = 'inline-block';
       document.getElementById('btnImg9').style.display = 'inline-block';
+      document.getElementById('btnImg10').style.display = 'inline-block';
 
       // Esconder a imagem mostrada e o botão "Voltar ao Início"
       document.getElementById('imagemContainer').classList.add('hidden');
